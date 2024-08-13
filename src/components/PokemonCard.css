@@ -1,0 +1,40 @@
+/* src/components/PokemonCard.css */
+
+.pokemon-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 10px;
+  text-align: center;
+  width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.pokemon-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.pokemon-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.pokemon-name {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.add-to-team-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-team-btn:hover {
+  background-color: #0056b3;
+}

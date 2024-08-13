@@ -1,0 +1,86 @@
+/* src/pages/TeamBuilder.css */
+
+.teambuilder-container {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-image: url('/public/images/bg-pokemon-prairie.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #ffcb05;
+}
+
+.team-and-battle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.team-section, .battle-section {
+  flex: 1;
+  margin: 10px;
+  min-width: 300px; /* Ensures sections are responsive */
+}
+
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.battle-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.battle-controls div {
+  margin: 10px 0;
+}
+
+select {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  background: #3d7dca;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2a65a0;
+}
+
+.battle-result {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffcb05;
+}
+
+.pokemon-selection {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pokemon-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
