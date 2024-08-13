@@ -63,7 +63,7 @@ Clonez le dépôt :
 
 bash
 Copier le code
-git clone https://github.com/your-repository/pokemon-team-builder.git
+git clone https://github.com/mathisflcvr/pokemon-like
 Accédez au répertoire du projet :
 
 bash
@@ -90,3 +90,59 @@ public/images/ : Contient les images de fond utilisées dans l'application.
 Styles
 src/components/HomePage.css : Styles pour la page d'accueil.
 src/components/TeamBuilder.css : Styles pour le constructeur d'équipe.
+
+Schéma d'architecture back :
+
++------------------------+          +--------------------+
+|                        |          |                    |
+|   User Interface       |          |   Backend Services |
+|                        |          |                    |
++------------------------+          +--------------------+
+          |                                |
+          |                                |
+          v                                v
++------------------+              +--------------------------+
+|  TeamBuilder.js  |              |     api.js                |
+|                  |              |                          |
+| - team            |   <------> | - fetchPokemons()        |
+| - pokemons        |   <------> | - fetchPokemonDetails(id) |
+| - selectedEnemy   |              | - fetchMoveDetails(url)  |
+| - selectedPlayer  |              +--------------------------+
+| - battleResult    |
+| - playerMove      |
+| - availableMoves  |
+| - enemyMoves      |
+|                  |
++------------------+
+          |
+          |
+          v
++------------------+              
+|  PokemonCard.js  |              
+|                  |              
+| - pokemon        |              
+| - addToTeam      |              
+| - removeFromTeam |              
+| - isInTeam       |              
+| - disableAdd     |              
+|                  |              
++------------------+              
+
++------------------------+              
+|                        |              
+|   TeamContext.js       |              
+|                        |              
+| - TeamContext          |              
+| - TeamProvider         |              
+|                        |              
++------------------------+              
+          |                               
+          |                               
+          v                               
++------------------------+               
+|                        |               
+|   BattlePage.js        |               
+|                        |               
+| - team                  |               
+|                        |               
++------------------------+
